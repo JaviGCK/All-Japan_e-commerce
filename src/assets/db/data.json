@@ -1,0 +1,201 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "name": "Wasabi",
+            "description": "fresh wasabi",
+            "full-description": "",
+            "img": "wasabi-1-removebg-preview.webp",
+            "weight": "200gr",
+            "price": "35€",
+            "class": "vegetables",
+            "section1": "new",
+            "section2": "most"
+        },
+
+        {
+            "id": "2",
+            "name": "Wasabi Root",
+            "description": "fresh wasabi root",
+            "full-description": "",
+            "img": "wasabi.webp",
+            "weight": "150gr",
+            "price": "30€",
+            "class": "vegetables",
+            "section1": "new"
+        },
+
+        {
+            "id": "3",
+            "name": "Wasabi flower",
+            "description": "wasabi flower salad",
+            "full-description": "",
+            "img": "florwasabisalad.webp",
+            "weight": "250",
+            "price": "6€",
+            "class": "vegetables",
+            "section1": "most"
+        },
+
+        {
+            "id": "4",
+            "name": "Yuzu",
+            "description": "yellow yuzu",
+            "full-description": "",
+            "img": "yuzu1.webp",
+            "weight": "500gr",
+            "price": "23€",
+            "class": "vegetables"
+        },
+
+        {
+            "id": "5",
+            "name": "Sudachi",
+            "description": "green sudachi",
+            "full-description": "",
+            "img": "yuzu2.webp",
+            "weight": "500gr",
+            "price": "25€",
+            "class": "vegetables",
+            "section": "most"
+        },
+
+        {
+            "id": "6",
+            "name": "Kyuri",
+            "description": "japan cucumber",
+            "full-description": "",
+            "img": "cucumber.webp",
+            "weight": "500gr",
+            "price": "12€",
+            "class": "vegetables"
+        },
+
+        {
+            "id": "7",
+            "name": "Himalayan",
+            "description": "green himalaya tea",
+            "full-description": "",
+            "img": "himalayagreen.webp",
+            "weight": "150gr",
+            "price": "9€",
+            "class": "tea",
+            "section1": "most",
+            "section2": "new"
+        },
+
+        {
+            "id": "8",
+            "name": "Himalayark",
+            "description": "black himalayan tea",
+            "full-description": "",
+            "img": "himalayablack.webp",
+            "weight": "150gr",
+            "price": "8€",
+            "class": "tea"
+        },
+
+        {
+            "id": "9",
+            "name": "Green 1001",
+            "description": "green tea & jazmin",
+            "full-description": "",
+            "img": "1001.webp",
+            "weight": "150gr",
+            "price": "9€",
+            "class": "tea"
+        },
+
+        {
+            "id": "10",
+            "name": "Asia",
+            "description": "green tea fron Asia",
+            "full-description": "",
+            "img": "asia.webp",
+            "weight": "150gr",
+            "price": "11€",
+            "class": "tea",
+            "section": "new"
+        },
+
+        {
+            "id": "11",
+            "name": "Hilaya Tila",
+            "description": "tila & cordyceps",
+            "full-description": "",
+            "img": "tila.webp",
+            "weight": "150gr",
+            "price": "7€",
+            "class": "tea"
+        },
+
+        {
+            "id": "12",
+            "name": "Osawa Nigth",
+            "description": "black tea fron Osawa",
+            "full-description": "",
+            "img": "blacktea.webp",
+            "weight": "150gr",
+            "price": "13€",
+            "class": "tea",
+            "section": "most"
+        },
+
+        {
+            "id": "13",
+            "name": "Spyce Consay",
+            "description": "rice noodles & chily",
+            "full-description": "",
+            "img": "spicy_noodlees.webp",
+            "weight": "200gr",
+            "price": "4€",
+            "class": "noodles",
+            "section": "new"
+        },
+
+        {
+            "id": "14",
+            "name": "Samyang",
+            "description": "hot chicken flavour",
+            "full-description": "",
+            "img": "samyang.webp",
+            "weight": "200gr",
+            "price": "6€",
+            "class": "noodles"
+        },
+
+        {
+            "id": "15",
+            "name": "Gourmet",
+            "description": "rice noodles",
+            "full-description": "",
+            "img": "gourmet",
+            "weight": "200gr",
+            "price": "7€",
+            "class": "noodles"
+        },
+
+        {
+            "id": "16",
+            "name": "Udon",
+            "description": "big noodles",
+            "full-description": "",
+            "img": "udon.webp",
+            "weight": "200gr",
+            "price": "6€",
+            "class": "noodles",
+            "section": "most"
+        },
+
+        {
+            "id": "17",
+            "name": "Ramen",
+            "description": "rice soup noodles",
+            "full-description": "",
+            "img": "ramen.webp",
+            "weight": "200gr",
+            "price": "6€",
+            "class": "noodles"
+        }
+    ]
+}
