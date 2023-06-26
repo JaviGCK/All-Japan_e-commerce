@@ -9,8 +9,7 @@
             "weight": 200,
             "price": 35,
             "class": "vegetables",
-            "section1": "new",
-            "section2": "most"
+            "section": "new"             
         },
 
         {
@@ -22,7 +21,7 @@
             "weight": 150,
             "price": 30,
             "class": "vegetables",
-            "section1": "new"
+            "section": "new"
         },
 
         {
@@ -34,7 +33,7 @@
             "weight": 250,
             "price": 6,
             "class": "vegetables",
-            "section1": "most"
+            "section": "most"
         },
 
         {
@@ -45,7 +44,8 @@
             "img": "yuzu1.webp",
             "weight": 500,
             "price": 23,
-            "class": "vegetables"
+            "class": "vegetables",
+            "section": "most"
         },
 
         {
@@ -80,8 +80,7 @@
             "weight": 150,
             "price": 9,
             "class": "tea",
-            "section1": "most",
-            "section2": "new"
+            "section": "new"
         },
 
         {
@@ -195,7 +194,8 @@
             "img": "ramen.webp",
             "weight": 200,
             "price": 6,
-            "class": "noodles"
+            "class": "noodles",
+            "section": "most"
         }
     ]
 }

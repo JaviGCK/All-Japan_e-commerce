@@ -1,0 +1,7 @@
+.section-navbar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
+    white-space: nowrap;
+    margin-top: 2vh;
+    background-color: #FDD4D4;
+}

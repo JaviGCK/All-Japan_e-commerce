@@ -4,7 +4,7 @@ import { ProductCard } from '../product/ProductCard'
 export const SectionProducts = () => {
     return (
         <section className="section-products">
-            <ProductCard />
+            <ProductCard/>
         </section>
     )
 }

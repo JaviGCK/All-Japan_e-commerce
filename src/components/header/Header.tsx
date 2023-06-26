@@ -12,7 +12,7 @@ export const Header = () => {
                 <img className="header-user" src={user} alt="user"/>
             </div>
             <div className="header-body-div">
-                <input className="header-searchbar"type="text" name="searchbar" placeholder="search"/>
+                <input className="header-searchbar" type="text" name="searchbar" placeholder="search"/>
                 <span className="header-span-counter"></span>
                 <img className="header-cart" src={cart} alt="cart"/>
             </div>

@@ -7,6 +7,5 @@ export type ProductProps = {
     weight: number,
     price: number,
     class: string,
-    section1: string,
-    section2: string
+    section: string
   }
