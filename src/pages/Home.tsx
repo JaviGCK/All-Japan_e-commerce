@@ -1,15 +1,16 @@
 import { Header } from "../components/header/Header"
 import { Navbar } from "../components/navbar/Navbar"
-import { SectionProducts } from "../components/sectionProducts/SectionProduct"
+import { Products } from "../components/products/Products"
 import { Footer } from "../components/footer/Footer"
+import { ProductProps } from "../types/produtc"
 
 
-export const Home = () => {
+export const Home = (props: ProductProps) => {
     return (
         <>
             <Header/>
             <Navbar/>
-            <SectionProducts />
+            <Products {...props} />
             <Footer />
         </>
     )

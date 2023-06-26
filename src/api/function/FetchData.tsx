@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
-import { ProductProps } from '../types/produtc';
+import { useState } from 'react';
+import { ProductProps } from '../../types/produtc';
 
-export const useFetchData = (url: string) => {
+export const useFetchData = () => {
+  const url = "/src/assets/db/data.json"
   const [jsonData, setJsonData] = useState<ProductProps[] | null>(null);
 
-  useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(url);
@@ -17,7 +17,6 @@ export const useFetchData = (url: string) => {
     };
 
     fetchData();
-  }, [url]);
 
   return jsonData;
 };
