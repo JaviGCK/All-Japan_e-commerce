@@ -1,5 +1,10 @@
+import './SectionProducts.css'
+import { ProductCard } from '../product/ProductCard'
+
 export const SectionProducts = () => {
     return (
-        <div>SectionProducts</div>
+        <section className="section-products">
+            <ProductCard />
+        </section>
     )
 }
