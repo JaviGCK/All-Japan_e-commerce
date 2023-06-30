@@ -3,7 +3,7 @@ import { ProductProps } from "../types/produtc";
 
 export const ProductsContext = createContext({
   products: [] as ProductProps[],
-  changeProducts: (products: ProductProps[]): void => {}
+  changeProducts: (product: ProductProps[]): void => {}
 });
 
 export function ProductsProvider(props: any) {
@@ -12,6 +12,7 @@ export function ProductsProvider(props: any) {
   const changeProducts = (newProducts: ProductProps[]) => {
     setProducts(newProducts);
   }
+  
 
   return (
     <ProductsContext.Provider value={{

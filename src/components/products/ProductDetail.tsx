@@ -4,6 +4,7 @@ import { ProductsContext } from "../../context/ProductContext";
 import { getFetchData } from "../../api/function/FetchData";
 import { DetailCard } from "./DetailCard";
 
+
 export const ProductDetail = () => {
 
     const { id } = useParams();
@@ -16,8 +17,14 @@ export const ProductDetail = () => {
 
     const { products, changeProducts } = useContext(ProductsContext);
 
-    useEffect(() => {
+    if (products === null) return null;
 
+
+    const product = products.find((product)=> product.id === id);
+
+
+    useEffect(() => {
+        
         const fetchData = async () => {
             const newProducts = await getFetchData();
             changeProducts(newProducts);
@@ -25,13 +32,8 @@ export const ProductDetail = () => {
         fetchData();
     }, []);
 
-    if (products === null) return null;
-
     
-
-
-    const product = products.find((product)=> product.id === id);
-
+    
 
     return (
         <div>
