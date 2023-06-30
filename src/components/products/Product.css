@@ -1,0 +1,11 @@
+.products-title-page {
+    margin: 1vw;
+}
+
+.products-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+    width: 95%;
+    margin: 5vw 1vw 5vw 1vw;
+}
