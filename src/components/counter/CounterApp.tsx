@@ -24,10 +24,6 @@ export const CounterApp = ({ addLS, counterValue, updateCounterValue, product }:
 
     const handleBtnBuy = (): void => {
         addLS(product, counterValue);
-          const totalItem = counter
-          if(totalItem !== 0) {
-            
-          }
 		resetValue();
 	}
 

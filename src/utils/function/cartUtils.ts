@@ -12,8 +12,11 @@ export const getLS = () => {
     cartProducts: {}[],
     setCartProducts: (cartProducts: {}[]) => void
   ) => {
-    const productsToBuy = { product, counterValue };
-    const updatedCartProducts = [...cartProducts, productsToBuy];
-    setCartProducts(updatedCartProducts);
+    if (counterValue > 0) {
+      const productsToBuy = { product, counterValue };
+      const updatedCartProducts = [...cartProducts, productsToBuy];
+      setCartProducts(updatedCartProducts);
+    }
   };
+  
   
