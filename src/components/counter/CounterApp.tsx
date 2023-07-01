@@ -2,19 +2,23 @@ import { useState } from 'react'
 
 
 
-export const CounterApp = () => {
+export const CounterApp = ({ addLS, counterValue, updateCounterValue, product }: { addLS: (product: any, counterValue: number) => void; counterValue: number; updateCounterValue: (value: number) => void; product: any }) => {
 
+    
 
 
     const initialValue = 0;
     const [counter, setCounter] = useState(initialValue);
 
+
     const increaseValue = () => {
         setCounter((prevState: number) => prevState + 1)
+        updateCounterValue(counter + 1);
     }
 
     const decreaseValue = () => {
         setCounter((prevState: number) => prevState - 1)
+        updateCounterValue(counter - 1);
         
     }
 
@@ -24,11 +28,13 @@ export const CounterApp = () => {
     
 
     const handleBtnBuy = (): void => {
-        
-		if (counter === 0) return;
-        
+        addLS(product, counterValue);
+          const totalItem = counter
+          if(totalItem !== 0) {
+            
+          }
+        console.log(totalItem);
 		resetValue();
-        
 	}
 
     if(counter === -1) {
@@ -42,7 +48,6 @@ export const CounterApp = () => {
         { label: "ResetValue", id: "reset", action: resetValue, display: "C" },
     ];
 
-    
 
 
     return (
