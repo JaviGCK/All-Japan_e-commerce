@@ -1,11 +1,6 @@
 import { useState } from 'react'
 
-
-
 export const CounterApp = ({ addLS, counterValue, updateCounterValue, product }: { addLS: (product: any, counterValue: number) => void; counterValue: number; updateCounterValue: (value: number) => void; product: any }) => {
-
-    
-
 
     const initialValue = 0;
     const [counter, setCounter] = useState(initialValue);
@@ -33,7 +28,6 @@ export const CounterApp = ({ addLS, counterValue, updateCounterValue, product }:
           if(totalItem !== 0) {
             
           }
-        console.log(totalItem);
 		resetValue();
 	}
 
