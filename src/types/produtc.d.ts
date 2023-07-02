@@ -9,6 +9,6 @@ export type ProductProps = {
     class: string,
     section: string,
     name: string,
-    quantity: number
+    counterValue?: number
     addLS: any
   }

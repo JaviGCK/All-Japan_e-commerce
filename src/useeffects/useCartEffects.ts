@@ -1,13 +1,12 @@
-// useCartEffects.js
-import { useEffect } from 'react';
-import { getLS } from '../function/cartUtils';
+import { useEffect } from "react";
+import { getLS } from "../utils/function/cartUtils";
 
-
-export const useCartEffects = (cartProducts: {}[], setCartProducts: React.Dispatch<React.SetStateAction<{}[]>>) => {
+export const useCartEffects = (cartProducts: {}[], setCartProducts: any) => {
   useEffect(() => {
     const storedCartProducts = getLS();
     if (storedCartProducts) {
-      setCartProducts(storedCartProducts);
+  
+      setCartProducts([...storedCartProducts]);
     }
   }, [setCartProducts]);
 
@@ -17,4 +16,6 @@ export const useCartEffects = (cartProducts: {}[], setCartProducts: React.Dispat
     }
   }, [cartProducts]);
 };
+
+
 

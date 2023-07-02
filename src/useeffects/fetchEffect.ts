@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
-import { ProductsContext } from "../../context/ProductContext";
-import { getFetchData } from "../../api/function/FetchData";
+import { ProductsContext } from "../context/ProductContext";
+import { getFetchData } from "../api/function/FetchData";
 
 export function fetchEffect() {
     const { changeProducts } = useContext(ProductsContext);

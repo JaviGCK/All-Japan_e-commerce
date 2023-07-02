@@ -1,6 +1,11 @@
+import { Cart } from "../components/cart/Cart";
+import { ProductsProvider } from "../context/ProductContext";
+
 export const CartPage= () => {
-    return (
-       <h1>Cart Page</h1> 
-        
-    )
+  
+  return (
+    <ProductsProvider>
+      <Cart  /> 
+    </ProductsProvider>
+  );
 };
