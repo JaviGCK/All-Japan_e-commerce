@@ -5,7 +5,6 @@ export const CounterApp = ({ addLS, counterValue, updateCounterValue, product }:
     const initialValue = 0;
     const [counter, setCounter] = useState(initialValue);
 
-
     const increaseValue = () => {
         setCounter((prevState: number) => prevState + 1)
         updateCounterValue(counter + 1);
@@ -13,8 +12,7 @@ export const CounterApp = ({ addLS, counterValue, updateCounterValue, product }:
 
     const decreaseValue = () => {
         setCounter((prevState: number) => prevState - 1)
-        updateCounterValue(counter - 1);
-        
+        updateCounterValue(counter - 1);  
     }
 
     const resetValue = () => {
@@ -38,13 +36,10 @@ export const CounterApp = ({ addLS, counterValue, updateCounterValue, product }:
         { label: "ResetValue", id: "reset", action: resetValue, display: "C" },
     ];
 
-
-
     return (
         <>
         <div>{counter}</div>
             {buttons.map((button) => (
-
                 <button key={button.id}
                     className={`btn-counter btn-counter__${button.label.toLowerCase()}`}
                     onClick={button.action}
