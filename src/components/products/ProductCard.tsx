@@ -2,19 +2,23 @@ import './ProductCard.css';
 import { ProductProps } from '../../types/produtc';
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
-
-export const ProductCard: FC<ProductProps> = (props) => {
-
+/**
+ * 
+ * @param  Props from Porduct
+ * @returns a card with all element we need to show the product.
+ * 
+ */
+export const ProductCard: FC<ProductProps> = ({ id, img, name, description, weight, price }) => {
   return (
-
-    <Link to={`/detail/${props.id}`} className="card-product-link">
-          <div className="card-product">
-            <img className="card-product-img" src={`/src/assets/img/${props.img}`} alt={props.name} />
-            <h3 className="card-product-name">{props.name}</h3>
-            <p className="card-product-description">{props.description}</p>
-            <span className="card-product-weight">{props.weight}gr</span>
-            <span className="card-product-price">{props.price}€</span>
-          </div>
+    <Link to={`/detail/${id}`} className="card-product-link">
+      <div className="card-product">
+        <img className="card-product-img" src={`/src/assets/img/${img}`} alt={name} />
+        <h3 className="card-product-name">{name}</h3>
+        <p className="card-product-description">{description}</p>
+        <span className="card-product-weight">{weight}gr</span>
+        <span className="card-product-price">{price}€</span>
+      </div>
     </Link>
   );
 };
+

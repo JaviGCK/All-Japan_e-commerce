@@ -1,24 +1,21 @@
 import './Product.css'
+import { useContext } from "react";
 import { ProductProps } from "../../types/produtc";
-import { ProductCard } from "./ProductCard";
+import { ProductCard } from "./index";
 import { filterProduct } from "../../utils/function/supportFunction";
-import { useContext, useEffect } from "react";
-import { ProductsContext } from "../../context/ProductContext"; 
-import { getFetchData } from "../../api/function/FetchData";
-import { FilterContext } from "../../context/FilterContext";
+import { ProductsContext, FilterContext } from "../../context/index"; 
+import { fetchEffect } from '../../useeffects/fetchEffect';
+/**
+ * 
+ * @returns Displays a section of products filtered based on the selected filter option. It uses the ProductsContext and FilterContext contexts to get the products and the current filter, respectively. Then, it renders the product cards corresponding to the filtered products.
+ */
  
 export const Products = () => {
 
-  const { products, changeProducts } = useContext(ProductsContext);
+  const { products } = useContext(ProductsContext);
   const { filter } = useContext(FilterContext);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const newProducts = await getFetchData();
-      changeProducts(newProducts);
-    };
-    fetchData();
-  }, []);
+  fetchEffect();
   
   if (products === null) return null;
   

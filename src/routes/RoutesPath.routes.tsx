@@ -1,13 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ProductProps } from "../types/produtc";
-import { FC } from "react";
-import { Layout } from "../Layout";
-import { HomePage } from "../pages/HomePage"
-import { DetailsPage } from "../pages/DetailsPage";
-import { CartPage } from "../pages/CartPage";
+import { Layout } from "../layout/Layout";
+import { CartPage, HomePage, DetailsPage } from "../pages";
 
-
-export const RoutesPath: FC<ProductProps> = () => {
+export const RoutesPath = () => {
     return (
         <>
             <BrowserRouter>
@@ -18,7 +13,6 @@ export const RoutesPath: FC<ProductProps> = () => {
                     </Route>
                     
                     <Route path="/cart" element={<CartPage/>}/>
-                    
                 </Routes>
             </BrowserRouter>
         </>

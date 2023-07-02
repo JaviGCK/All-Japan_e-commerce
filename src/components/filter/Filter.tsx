@@ -2,6 +2,11 @@ import './Filter.css';
 import { FilterCategory } from '../../samples/enum';
 import { FilterButton } from './FilterButton';
 
+/**
+ * 
+ * @returns Renders a list of buttons representing the different product class, making navigation possible between them.
+ */
+
 export const Filter = () => {
   const NamesFilter = [{
     name: "All Products",
@@ -24,11 +29,6 @@ export const Filter = () => {
     id: 4
   }
 ]
-
-
-
-
-  
 
   return (
     <>

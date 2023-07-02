@@ -1,9 +1,7 @@
-import { ProductDetail } from "../components/products/ProductDetail";
+import { ProductDetail } from "../components/products/index";
 
 export const DetailsPage = () => {
-
-    return (
-         
+    return (     
           <ProductDetail/>    
     )
 };

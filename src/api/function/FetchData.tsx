@@ -1,5 +1,4 @@
 
-
 export const getFetchData = async() => {
   const url = "http://localhost:3000/products"
         const response = await fetch(url);

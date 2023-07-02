@@ -3,12 +3,12 @@ import { FC } from "react"
 import { ProductProps } from "../../types/produtc"
 import hearth from '../../assets/img/mdi-heart (1).webp';
 import { Link } from 'react-router-dom';
-
-
-
-
-
-
+/**
+ * 
+ * @param  Props from Porduct
+ * @returns a card with all element we need to show the product.
+ * 
+ */
 export const DetailCard: FC<ProductProps> = (props) => (
     <section className="section-product-detail-card">
         <div className="product-card-detail-div-img">
@@ -26,8 +26,6 @@ export const DetailCard: FC<ProductProps> = (props) => (
             <p className="product-card-detail-full-description">{props.fullDescription}</p>
 
             <span className="product-card-detail-price">{props.price}€</span>
-
-
         </div>
     </section>
 )

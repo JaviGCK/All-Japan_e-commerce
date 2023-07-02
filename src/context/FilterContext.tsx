@@ -1,6 +1,8 @@
 import { createContext, useState } from "react";
 import { FilterCategory } from "../samples/enum"
 
+/**
+ * Creates a context provider that allows filter state to be shared and updated in child components. */
 
 export const FilterContext = createContext({
     filter: {} as FilterCategory,
@@ -20,6 +22,5 @@ export function FilterProvider(props:any) {
         }}>
             {props.children}
         </FilterContext.Provider>
-
     )
 }
