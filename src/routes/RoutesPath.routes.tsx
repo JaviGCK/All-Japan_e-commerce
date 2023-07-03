@@ -23,7 +23,7 @@ export const RoutesPath = () => {
                     <Route path="/register" element={<RegisterPage />} />
                     <Route path="/form" element={<RegisterForm />} />
                     <Route path="/thanks" element={<Thanks />} />
-
+                    
                 </Routes>
             </BrowserRouter>
         </>
