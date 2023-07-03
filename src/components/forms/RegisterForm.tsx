@@ -84,12 +84,12 @@ export default function RegisterForm() {
 				<input
 					{...register("codepost", {
 						required: true, minLength: {
-							value: 3,
-							message: "Minimun length is 3",
+							value: 5,
+							message: "This is not a codepost number"
 						},
 						maxLength: {
-							value: 30,
-							message: "Maximum length is 30"
+							value: 5,
+							message: "This is not a codepost number"
 						}
 					})}
 					placeholder="Code post"
