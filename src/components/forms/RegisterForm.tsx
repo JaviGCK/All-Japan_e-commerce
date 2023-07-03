@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { FormInputs } from "../../types/index";
 
-export default function RegisterForm() {
+export function RegisterForm() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const {
     register,
@@ -25,7 +25,7 @@ export default function RegisterForm() {
   const onSubmit = (data: FormInputs) => {
     reset();
     setFormSubmitted(true);
-    navigate("/thanks");
+    navigate("thanks");
   };
 
   return (
@@ -116,7 +116,7 @@ export default function RegisterForm() {
         </button>
       </form>
       {formSubmitted && (
-        <Link to="/thanks">
+        <Link to="thanks">
           Thanks
         </Link>
       )}

@@ -33,7 +33,7 @@ export const Cart = () => {
         <Link to={"/"}>
           Go Home
         </Link>
-        <Link to={"/register"}>
+        <Link to={"/checkout"}>
           Checkout
         </Link>
       </section>

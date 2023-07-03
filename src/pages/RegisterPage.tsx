@@ -1,9 +1,9 @@
-import RegisterForm from "../components/forms/RegisterForm"
+import { Outlet } from "react-router-dom"
 
 export const RegisterPage = () => {
   return (
     <>
-    <RegisterForm/>
+    <Outlet/>
     </>
   )
 }
