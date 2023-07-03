@@ -3,5 +3,8 @@ export type FormInputs = {
     secondname: string,
     address: string,
     codepost: string,
-    phone?: string
+    phone?: string,
+    username: string,
+    email: string,
+    repeatemail: string
 }

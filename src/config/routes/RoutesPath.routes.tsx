@@ -4,7 +4,7 @@ import { CartPage, HomePage, DetailsPage, RegisterPage, PrivatePage } from "../.
 import { CART, CHECKOUT, DETAIL, HOME, LOGIN, LOGOUT, PRIVATE, THANKS } from "./path";
 import { Thanks, RegisterForm } from "../../components/forms";
 import { AuthContextProvider } from "../../context";
-import { Private } from "../../components/private/Private";  
+import { Private } from "../../components/login/Welcome";  
 import { Login, Logout } from "../../components/login";
 
 
@@ -17,13 +17,13 @@ export const RoutesPath = () => {
                         <Route index element={<HomePage />} />
                         <Route path={DETAIL} element={<DetailsPage />} />
                         <Route path={LOGIN} element={<Login />} />
+                        <Route path={LOGOUT} element={<Logout />} />
                     </Route>
 
                      
 
                     <Route path={PRIVATE} element={<Private/>}>
                         <Route index element={<PrivatePage />} />
-                        <Route path={LOGOUT} element={<Logout />} />
                     </Route>
 
                     <Route path={CART} element={<CartPage />} />

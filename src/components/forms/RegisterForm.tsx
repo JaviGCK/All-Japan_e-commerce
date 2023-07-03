@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import { FormInputs } from "../../types/index";
 
 export function RegisterForm() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -12,17 +11,19 @@ export function RegisterForm() {
     reset
   } = useForm({
     defaultValues: {
+      username: "",
+      email: "",
+      repeatemail: "",
       firstname: "",
       secondname: "",
       address: "",
       codepost: "",
       phone: ""
-    }
-  });
+  }});
 
   const navigate = useNavigate();
 
-  const onSubmit = (data: FormInputs) => {
+  const onSubmit = () => {
     reset();
     setFormSubmitted(true);
     navigate("thanks");

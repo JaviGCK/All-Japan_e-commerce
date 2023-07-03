@@ -2,9 +2,12 @@ import './Header.css'
 import logo from '../../assets/img/logo-all-japan.webp'
 import cart from '../../assets/img/solar_cart-large-2-outline.webp'
 import { Link } from 'react-router-dom'
-import { CART, LOGIN } from '../../config/routes/path'
+import { CART, LOGIN, LOGOUT } from '../../config/routes/path'
+import { useAuthContext } from '../../context'
 
 export const Header = () => {
+    const { isAuthentificated } = useAuthContext(); 
+    
     return (
         <header>
             <div className="header-top-div">
@@ -17,9 +20,11 @@ export const Header = () => {
                 <Link to={CART} className="header-cart">
                 <img  src={cart} alt="cart"/>
                 </Link>
-                <Link to={LOGIN}>
-                    Login
-                </Link>
+                {isAuthentificated ? (
+          <Link to={LOGOUT}>Logout</Link>
+        ) : (
+          <Link to={LOGIN}>Login</Link> 
+        )}
             </div>
         </header>
     )
