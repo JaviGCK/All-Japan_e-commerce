@@ -25,7 +25,7 @@ export const Login = () => {
 
   const onSubmit = (event: any) => {
     event.preventDefault();
-    if (email !== repeatemail) {
+    if (email === repeatemail) {
       login();
       navigate(PRIVATE)
     }

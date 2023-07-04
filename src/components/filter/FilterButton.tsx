@@ -1,8 +1,8 @@
-import './Filter.css'
 import { useContext } from 'react';
 import { FilterCategory } from '../../samples/enum';
 import { FilterContext } from '../../context/index';
 import { FilterButtonProps } from '../../types/filter';
+import { Button } from '../style';
 
 /**
  * 
@@ -19,9 +19,9 @@ export const FilterButton = ({ name, filter, id }: FilterButtonProps) => {
   };
 
   return (
-    <button className="button-filter" id={id} onClick={() => handleFilter(filter)}>
+    <Button id={id} onClick={() => handleFilter(filter)}>
       {name}
-    </button>
+    </Button>
   );
 };
 

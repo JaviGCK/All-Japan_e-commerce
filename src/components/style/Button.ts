@@ -1,13 +1,7 @@
-.section-filter {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
-    place-items: center;
-    margin: 2vh 0;
-    
-}
+import { styled } from "styled-components";
 
-.button-filter {
-    width: 40vw;
+export const Button = styled.button`
+ width: 40vw;
     height: 5vh;
     margin: 2vw;
     border: none;
@@ -21,4 +15,4 @@
     box-shadow: 0 4px 4px rgb(57, 55, 55, 25%);
     background-color: #FDD4D4;
     cursor: pointer;
-}
+`

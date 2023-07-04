@@ -1,6 +1,6 @@
-import './Filter.css';
 import { FilterCategory } from '../../samples/enum';
 import { FilterButton } from './FilterButton';
+import { Nav } from '../style';
 
 /**
  * 
@@ -32,7 +32,7 @@ export const Filter = () => {
 
   return (
     <>
-      <nav className="section-filter">
+      <Nav>
         {NamesFilter.map((filter) => (
           <FilterButton
             name={filter.name}
@@ -41,7 +41,7 @@ export const Filter = () => {
             id={filter.id.toString()}
           />
         ))}
-      </nav>
+      </Nav>
     </>
   );
 };
