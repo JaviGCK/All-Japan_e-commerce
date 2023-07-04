@@ -5,5 +5,5 @@ export const Nav = styled.nav`
     grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
     place-items: center;
     margin: 3vh 0;
-    background-color: #fee3e3;
+    background-color: #FDEAEA;
 `

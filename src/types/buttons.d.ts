@@ -11,3 +11,4 @@ export type ButtonAction = {
 	fullDescription?: "string";
 	img: "string";
 };
+

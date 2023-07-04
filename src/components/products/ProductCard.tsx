@@ -1,7 +1,6 @@
-import './ProductCard.css';
 import { ProductProps } from '../../types/produtc';
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { ImgProduct, LinkProduct, SpanProduct, WrappCardProduct } from '../style';
 /**
  * 
  * @param  Props from Porduct
@@ -10,15 +9,15 @@ import { Link } from 'react-router-dom';
  */
 export const ProductCard: FC<ProductProps> = ({ id, img, name, description, weight, price }) => {
   return (
-    <Link to={`/detail/${id}`} className="card-product-link">
-      <div className="card-product">
-        <img className="card-product-img" src={`/src/assets/img/${img}`} alt={name} />
-        <h3 className="card-product-name">{name}</h3>
-        <p className="card-product-description">{description}</p>
-        <span className="card-product-weight">{weight}gr</span>
-        <span className="card-product-price">{price}€</span>
-      </div>
-    </Link>
+    <LinkProduct to={`/detail/${id}`} className="card-product-link">
+      <WrappCardProduct>
+        <ImgProduct src={`/src/assets/img/${img}`} alt={name} />
+        <h3>{name}</h3>
+        <p>{description}</p>
+        <span>{weight}gr</span>
+        <SpanProduct>{price}€</SpanProduct>
+      </WrappCardProduct>
+    </LinkProduct>
   );
 };
 
