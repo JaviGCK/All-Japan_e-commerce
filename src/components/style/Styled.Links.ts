@@ -1,22 +1,27 @@
-import { Link } from "react-router-dom";
-import { styled } from "styled-components";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { LinkProps } from '../../types';
 
 
-//HEADER 
+export const Links = styled(Link)<LinkProps>`
 
-export const LinkCart = styled(Link)`
+    text-decoration: none;
+    color: #000;
+
+  ${({ $cart }) =>
+    $cart &&
+    `
     position: absolute;
     right: 12%;
     margin-top: 2vh;
-`
-export const LinkLogin = styled(Link)`
+  `}
+
+  ${({ $login }) =>
+    $login &&
+    `
     text-decoration: none;
     color: #000000;
-`
+  `}
 
-//PRODUCTS
+`;
 
-export const LinkProduct = styled(Link)`
-    text-decoration: none;
-    color: #000;
-`

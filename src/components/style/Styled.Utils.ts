@@ -17,13 +17,6 @@ export const ImgProduct = styled.img`
     height: 15vh;
 `
 
-export const SpanProduct = styled.span`
-    position: absolute;
-    bottom: 2vh;
-    left: 5vw;
-    font-size: 1.5rem;
-    font-weight: bold;
-`
 
 // FOOTER
 
@@ -32,3 +25,4 @@ export const ImgSocialMedia = styled.img`
     height: 5vh;
     margin: 10vw;
 `
+

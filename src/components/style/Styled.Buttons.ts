@@ -1,10 +1,5 @@
 import styled from "styled-components";
-
-// BUTTON
-type ButtonProps = {
-  $login?: boolean;
-  $subs?: boolean;
-};
+import { ButtonProps } from "../../types";
 
 export const Button = styled.button<ButtonProps>`
   width: 40vw;
@@ -58,38 +53,3 @@ export const Button = styled.button<ButtonProps>`
     z-index: 1000;
   `}
 `;
-
-// FOOTER
-export const InputFooter = styled.input`
-  position: absolute;
-  top: 25%;
-  right: 15%;
-  width: 70vw;
-  height: 4vh;
-  border: none;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  z-index: 0;
-`;
-
-
-export const ButtonFooter = styled.button`
-    position: absolute;
-    top: 26.5%;
-    right: 17%;
-    width: 30vw;
-    height: 3vh;
-    border: 1px solid black;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    box-shadow: 0 4px 4px rgb(57, 55, 55, 25%);
-    z-index: 1;
-    background-color: #f4f6f8;
-    cursor: pointer;
-`
