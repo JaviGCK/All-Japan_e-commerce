@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import { Wrapp, WrappSection } from "../style";
+import { Button, InputForm, Wrapp, WrappSection } from "../style";
 
 export function RegisterForm() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -30,13 +30,19 @@ export function RegisterForm() {
     navigate("thanks");
   };
 
+  {formSubmitted && (
+    <Link to="thanks">
+      Thanks
+    </Link>
+  )}
+
   return (
     <WrappSection $form>
       
       <Wrapp $form>
       <form onSubmit={handleSubmit(onSubmit)}>
         
-        <input
+        <InputForm
           {...register("firstname", {
             required: true,
             minLength: {
@@ -52,7 +58,7 @@ export function RegisterForm() {
         />
         {errors.firstname && <p>{errors.firstname.message}</p>}
 
-        <input
+        <InputForm
 					{...register("secondname", {
 						required: true, minLength: {
 							value: 3,
@@ -68,7 +74,7 @@ export function RegisterForm() {
 
 				{errors.secondname && <p>{errors?.secondname?.message}</p>}
 
-				<input
+				<InputForm
 					{...register("address", {
 						required: true, minLength: {
 							value: 3,
@@ -84,7 +90,7 @@ export function RegisterForm() {
 
 				{errors.address && <p>{errors?.address?.message}</p>}
 
-				<input
+				<InputForm
 					{...register("codepost", {
 						required: true, minLength: {
 							value: 5,
@@ -101,7 +107,7 @@ export function RegisterForm() {
 				{errors.codepost && <p>{errors?.codepost?.message}</p>}
 
 
-				<input
+				<InputForm
 					{...register("phone", {
 
 						maxLength: {
@@ -114,15 +120,11 @@ export function RegisterForm() {
 
 				{errors.phone && <p>{errors?.phone?.message}</p>}
 
-        <button type="submit" disabled={false}>
-          Submit
-        </button>
+        <Button $form type="submit" disabled={false}>
+          Continue
+        </Button>
       </form>
-      {formSubmitted && (
-        <Link to="thanks">
-          Thanks
-        </Link>
-      )}
+      
       </Wrapp>
     </WrappSection>
   );

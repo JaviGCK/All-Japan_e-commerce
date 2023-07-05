@@ -12,6 +12,8 @@ export type WrappProps = {
     $cart?: boolean;
     $carttitle?: boolean;
     $form?: boolean;
+    $login?: boolean;
+    $welcome?: boolean;
   }
 
 export type ButtonProps = {
@@ -19,14 +21,17 @@ export type ButtonProps = {
     $subs?: boolean;
     $fav?: boolean;
     $counter?: boolean;
+    $form?: boolean;
+    $loginform?: boolean;
+    $back?: boolean;
+    $close?: boolean;
   }
 
   export type LinkProps = {
     $cart?: boolean;
     $login?: boolean;
+    $home?: boolean;
   }
 
-  export type HeadingProps = {
-    $cart: boolean;
-  }
+
 

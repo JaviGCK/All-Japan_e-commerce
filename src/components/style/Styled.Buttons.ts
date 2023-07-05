@@ -59,6 +59,35 @@ ${({ $counter }) =>
     height: 7vw;
   `}
 
+${({ $form }) =>
+    $form &&
+    `
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+  `} 
+
+${({ $loginform }) =>
+    $loginform &&
+    `
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+  `} 
+
+${({ $back }) =>
+    $back &&
+    `
+    position: absolute;
+    top: 28%;
+    left: 2%;
+    transform: translateX(-50%);
+    width: 10vw;
+    border-radius: 0 5px 5px 0;
+  `} 
+
 `;
 
 

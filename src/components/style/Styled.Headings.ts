@@ -1,5 +1,4 @@
 import { styled } from "styled-components";
-import { HeadingProps } from "../../types";
 
 //HEADING
 
@@ -12,17 +11,25 @@ export const H3 = styled.h3`
     padding-top: 3vh;
 `
 
-export const H2 = styled.h2<HeadingProps>`
+export const H2 = styled.h2`
     padding: 2vw;
     font-size: 1.5rem;
+`
 
-${({ $cart }) =>
-    $cart &&
-    `
-    widht: 100%
-    padding: 5vw 100vw 0 100vw;
-    font-size: 3rem;
-  `}
+export const H2W = styled.h2`
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+`
+export const H2G = styled.h2`
+    font-size: 4rem;
+`
+
+export const P = styled.p`
+    padding: 5vw;
+    font-size: 2rem;
 `
 
 //SPAN

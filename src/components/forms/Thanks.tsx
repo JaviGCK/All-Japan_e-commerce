@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ProductProps } from '../../types';
 import { useCartEffects } from '../../useeffects';
+import { H2, ImgProduct, Wrapp, WrappSection } from '../style';
 /**
  * 
  * show up a completed purchase and redirected to HomePage to start again shopping
@@ -24,24 +25,18 @@ export const Thanks = () => {
   }, [navigate]);
 
   return (
-    <section>
-      <h3>Thanks for your purchase</h3>
-      <p>Your purchase has been successfully completed</p>
-    <div>
-      {productToRender.map((product: ProductProps, index: number) => {
-            return (
-              <div key={index}>
-                <img src={`/src/assets/img/${product.img}`} alt={product.name} />
-                <h4>{product.name}</h4>
-							<p>
-								<span>Uds: {product.counterValue} | </span>
-								<span>Price: {product.price}€</span>
-							</p>
-              </div> 
-            );
-          })}
-          </div>
-    </section>
+    <WrappSection>
+      <H2>Thanks for your purchase</H2>
+        {productToRender.map((product: ProductProps, index: number) => {
+          return (
+            <Wrapp $cart key={index}>
+              <ImgProduct src={`/src/assets/img/${product.img}`} alt={product.name} />
+              <h4>{product.name}</h4>
+            </Wrapp>
+          );
+        })}
+        <H2><span>Congratulations</span>your purchase has been successfully completed!!</H2>
+    </WrappSection>
   );
 };
 

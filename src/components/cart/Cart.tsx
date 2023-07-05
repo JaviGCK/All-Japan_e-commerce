@@ -13,7 +13,7 @@ export const Cart = () => {
     return (
       <WrappSection $cart>
         <Wrapp $carttitle>
-        <H2 $cart>Your cart</H2>
+        <H2>Your cart</H2>
         </Wrapp>
           {productToRender.map((product: ProductProps, index: number) => {
             return (
@@ -32,13 +32,13 @@ export const Cart = () => {
 					<h2>Total: {getTotalPrice(cartProducts)}€</h2>
 				</Wrapp>
         <Button>
-        <Links $login to={"/"}>
-          Go Home
+        <Links $login to={"/checkout"}>
+          Checkout
         </Links>
         </Button>
         <Button>
-        <Links $login to={"/checkout"}>
-          Checkout
+        <Links $login to={"/"}>
+          Continue Shopping
         </Links>
         </Button>
       </WrappSection>

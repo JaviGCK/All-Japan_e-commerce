@@ -11,6 +11,14 @@ export const ImgLogo = styled.img`
     z-index: -1;
 `
 
+export const ImgHome = styled.img`
+    position: absolute;
+    top: -9px;
+    right: 22%;
+    width: 8vw;
+    height: 8vw;
+`
+
 // PRODUCT
 
 export const ImgProduct = styled.img`

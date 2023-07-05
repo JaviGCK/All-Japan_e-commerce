@@ -1,14 +1,15 @@
 import { useEffect } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { H2W, P, WrappSection } from "../style";
 
 export const Private = () => {
   const navigate = useNavigate();
-  
+
   useEffect(() => {
-    
+
     const redirectTimer = setTimeout(() => {
       navigate("/");
-    }, 3000);
+    }, 4000);
 
     return () => {
       clearTimeout(redirectTimer);
@@ -16,9 +17,10 @@ export const Private = () => {
   }, [navigate]);
 
   return (
-    <>
-    <h1>Private Vip Route</h1>
-    <Outlet/>
-    </>
+    <WrappSection $welcome>
+      <H2W>Welcome!!</H2W>
+      <P>We are happy to have you here again, we hope you have a good shopping</P>
+      
+    </WrappSection>
   )
 }

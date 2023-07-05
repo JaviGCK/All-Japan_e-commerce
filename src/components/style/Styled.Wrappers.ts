@@ -93,7 +93,6 @@ ${({ $counter }) =>
     `
     display: flex;
     justify-content: space-between;
-    
     margin-bottom: 5vh;
     border-radius: 15px;
     -webkit-border-radius: 15px;
@@ -148,19 +147,40 @@ ${({ $carttitle }) =>
 ${({ $form }) =>
     $form &&
     `
-  display: block;
-  width: 60vw;
-  padding: 10vw;
-  text-align: center;
-  border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 60vh;
+    padding: 10vw;
+    line-height: 2rem;
+    border-radius: 10px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-  background: #fff;
+    background: #fff;
   
 `}
 
+${({ $login }) =>
+    $login &&
+    `
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 40vh;
+    padding: 10vw;
+    line-height: 2rem;
+    border-radius: 10px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    background: #fff;
+  
+`}
 `;
 
 // FOOTER
@@ -180,6 +200,15 @@ export const WrappSection = styled.section<WrappProps>`
 
     ${({ $form }) =>
     $form &&
+    `
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  background-color: #FDEbEb;
+`}
+
+${({ $welcome }) =>
+    $welcome &&
     `
   width: 100%;
   height: 100vh;

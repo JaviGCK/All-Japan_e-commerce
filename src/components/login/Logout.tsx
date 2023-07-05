@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useAuthContext } from "../../context"
-import { Link } from "react-router-dom";
+import { Button, H2G, Links, WrappSection } from "../style";
 
 
 
@@ -8,10 +8,13 @@ export const Logout = () => {
   const { logout } = useAuthContext();
   useEffect(() => logout());
   return (
-    <>
-      <h2>Goodbye</h2>
-      <Link to="/">Close session</Link>
-    </>
+    <WrappSection>
+      <H2G>Goodbye</H2G>
+      <h2>We hope to have you back soon</h2>
+      <Button>
+        <Links to="/">Close session</Links>
+      </Button>
+    </WrappSection>
   )
 
 }
