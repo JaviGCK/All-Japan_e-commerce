@@ -10,7 +10,7 @@ import { ImgProduct, Links, SpanProduct, Wrapp } from '../style';
 export const ProductCard: FC<ProductProps> = ({ id, img, name, description, weight, price }) => {
   return (
     <Links to={`/detail/${id}`}>
-      <Wrapp CardProduct>
+      <Wrapp $CardProduct>
         <ImgProduct src={`/src/assets/img/${img}`} alt={name} />
         <h3>{name}</h3>
         <p>{description}</p>

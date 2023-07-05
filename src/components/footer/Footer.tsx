@@ -16,7 +16,7 @@ export const Footer = () => {
                 SUBSCRIBE
             </Button>
             </div>
-            <Wrapp SocialMedia>
+            <Wrapp $SocialMedia>
             <ImgSocialMedia src={icon1} alt="facebook_icon"/>
             <ImgSocialMedia src={icon2} alt="instagram_icon"/>
             <ImgSocialMedia src={icon3} alt="pinterest_icon"/>

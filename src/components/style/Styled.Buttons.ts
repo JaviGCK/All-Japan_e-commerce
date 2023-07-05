@@ -15,7 +15,6 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
 
   &:hover {
-    font-size: 1.5rem;
     background-color: #fdc4c4;
   }
 
@@ -52,4 +51,49 @@ export const Button = styled.button<ButtonProps>`
     -o-border-radius: 5px;
     z-index: 1000;
   `}
+
+${({ $counter }) =>
+    $counter &&
+    `
+    width: 15vw;
+    height: 7vw;
+  `}
+
 `;
+
+
+
+export const ButtonFav = styled.button<ButtonProps>`
+display: flex;
+    width: 10vw;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 37%;
+    right: 13%;
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0 4px 4px rgba(57, 55, 55, 0.25);
+    background-color: #000;
+    z-index: 1000;
+
+    &:hover {
+      font-size: 1.5rem;
+    }
+  
+    &:active {
+      box-shadow: inset 0 4px 4px rgba(57, 55, 55, 0.25);
+    }
+
+  ${({ $fav }) =>
+    $fav &&
+    `
+    background-color: #fdd4d4;
+    
+  `}
+`

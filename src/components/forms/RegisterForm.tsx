@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
+import { Wrapp, WrappSection } from "../style";
 
 export function RegisterForm() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -30,8 +31,9 @@ export function RegisterForm() {
   };
 
   return (
-    <>
-      <h1>Login</h1>
+    <WrappSection $form>
+      
+      <Wrapp $form>
       <form onSubmit={handleSubmit(onSubmit)}>
         
         <input
@@ -121,7 +123,8 @@ export function RegisterForm() {
           Thanks
         </Link>
       )}
-    </>
+      </Wrapp>
+    </WrappSection>
   );
 }
 

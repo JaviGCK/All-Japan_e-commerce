@@ -9,7 +9,7 @@ export const Header = () => {
 
     return (
         <header>
-            <Wrapp Top>
+            <Wrapp $Top>
             <Button $login={true}>
                 {isAuthentificated ? (
                     <Links $login to={LOGOUT}>Logout</Links>
@@ -20,8 +20,8 @@ export const Header = () => {
                 <ImgLogo src={logo} alt="logo" />
                 <H1Logo>All Japan</H1Logo>
             </Wrapp>
-            <Wrapp Body>
-                <Links $cart to={CART} className="header-cart">
+            <Wrapp $Body>
+                <Links $cart to={CART}>
                     <img src={cart} alt="cart" />
                 </Links>
 

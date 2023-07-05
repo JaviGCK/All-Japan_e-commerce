@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ProductProps } from "../../types/produtc";
 import { useCartEffects } from "../../useeffects/useCartEffects";
 import { getTotalPrice } from "../../utils/function/getTotalPrice";
-import { Link } from "react-router-dom";
+import { Button, H2, ImgProduct, Links, Wrapp, WrappSection } from "../style";
 
 export const Cart = () => {
     const [cartProducts, setCartProducts] = useState<ProductProps[]>([]);
@@ -11,32 +11,37 @@ export const Cart = () => {
     useCartEffects(cartProducts, setCartProducts);
   
     return (
-      <section>
-        <h2>Your products</h2>
-        
+      <WrappSection $cart>
+        <Wrapp $carttitle>
+        <H2 $cart>Your cart</H2>
+        </Wrapp>
           {productToRender.map((product: ProductProps, index: number) => {
             return (
-              <div key={index}>
-                <img src={`/src/assets/img/${product.img}`} alt={product.name} />
+              <Wrapp $cart key={index}>
+                <ImgProduct src={`/src/assets/img/${product.img}`} alt={product.name} />
                 <h4>{product.name}</h4>
 							<p>
 								<span>Uds: {product.counterValue} | </span>
 								<span>Price: {product.price}€</span>
 							</p>
-              </div> 
+              </Wrapp> 
             );
           })}
 
-        <div>
+        <Wrapp $cart>
 					<h2>Total: {getTotalPrice(cartProducts)}€</h2>
-				</div>
-        <Link to={"/"}>
+				</Wrapp>
+        <Button>
+        <Links $login to={"/"}>
           Go Home
-        </Link>
-        <Link to={"/checkout"}>
+        </Links>
+        </Button>
+        <Button>
+        <Links $login to={"/checkout"}>
           Checkout
-        </Link>
-      </section>
+        </Links>
+        </Button>
+      </WrappSection>
     );
   };
   

@@ -1,15 +1,24 @@
 export type WrappProps = {
-    Top?: boolean;
-    Body?: boolean;
-    ContainerProduct?: boolean;
-    CardProduct?: boolean;
-    Footer?: boolean;
-    SocialMedia?: boolean;
+    $Top?: boolean;
+    $Body?: boolean;
+    $ContainerProduct?: boolean;
+    $CardProduct?: boolean;
+    $Footer?: boolean;
+    $SocialMedia?: boolean;
+    $DetailProduct?: boolean;
+    $counter?: boolean;
+    $detailtext?: boolean;
+    $counterNum?: boolean;
+    $cart?: boolean;
+    $carttitle?: boolean;
+    $form?: boolean;
   }
 
 export type ButtonProps = {
     $login?: boolean;
     $subs?: boolean;
+    $fav?: boolean;
+    $counter?: boolean;
   }
 
   export type LinkProps = {
@@ -17,7 +26,7 @@ export type ButtonProps = {
     $login?: boolean;
   }
 
-  export type ImgProps = {
-    $product: boolean;
-    $socialMedia: boolean;
+  export type HeadingProps = {
+    $cart: boolean;
   }
+

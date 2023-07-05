@@ -15,6 +15,18 @@ export const ImgLogo = styled.img`
 
 export const ImgProduct = styled.img`
     height: 15vh;
+    display: block;
+    margin: 0 auto;
+`
+
+export const ImgDetail = styled.img`
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+`
+
+export const ImgHearth = styled.img`
+    width: 6vw;
 `
 
 

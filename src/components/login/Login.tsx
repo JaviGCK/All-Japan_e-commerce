@@ -1,6 +1,6 @@
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useAuthContext } from "../../context"
-import { LOGOUT, PRIVATE } from "../../config/routes/path";
+import { PRIVATE } from "../../config/routes/path";
 import { useForm } from "react-hook-form";
 import { FormInputs } from "../../types";
 
@@ -93,7 +93,6 @@ export const Login = () => {
           Submit
         </button>
       </form>
-      <Link to={LOGOUT}>Logout</Link>
     </>
   );
 };
