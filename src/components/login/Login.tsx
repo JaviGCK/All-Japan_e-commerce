@@ -1,5 +1,6 @@
-import { useNavigate } from "react-router-dom"
-import { useAuthContext } from "../../context"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "../../context";
 import { PRIVATE } from "../../config/routes/path";
 import { useForm } from "react-hook-form";
 import { FormInputs } from "../../types";
@@ -9,56 +10,45 @@ export const Login = () => {
   const {
     register,
     formState: { errors },
-    getValues,
-    trigger
+    handleSubmit,
   } = useForm<FormInputs>({
     defaultValues: {
       username: "",
       email: "",
       repeatemail: "",
-    }
+    },
   });
 
   const navigate = useNavigate();
   const { login } = useAuthContext();
-  const { email, repeatemail } = getValues();
+  const [error, setError] = useState("");
 
-
-  const onSubmit = (event: any) => {
-    event.preventDefault();
-    if (email === repeatemail) {
-      login();
-      navigate(PRIVATE)
+  const onSubmit = (data: FormInputs) => {
+    if (data.email !== data.repeatemail) {
+      setError("Emails do not match");
+      return;
     }
-  };
 
-  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    await trigger();
-    onSubmit(event);
+    login();
+    navigate(PRIVATE);
   };
 
   return (
     <WrappSection>
-
       <H2>Login</H2>
-
       <Wrapp $login>
-        
-        <form onSubmit={handleFormSubmit}>
-
+        <form onSubmit={handleSubmit(onSubmit)}>
           <InputForm
             {...register("username", {
-
               required: true,
               minLength: {
                 value: 3,
-                message: "Minimum length is 3"
+                message: "Minimum length is 3",
               },
               maxLength: {
                 value: 25,
-                message: "Maximum length is 25"
-              }
+                message: "Maximum length is 25",
+              },
             })}
             placeholder="User name"
           />
@@ -68,12 +58,12 @@ export const Login = () => {
               required: true,
               minLength: {
                 value: 3,
-                message: "Minimum length is 3"
+                message: "Minimum length is 3",
               },
               pattern: {
                 value: /@/,
-                message: "Email must contain @ symbol"
-              }
+                message: "Email must contain @ symbol",
+              },
             })}
             placeholder="Email"
           />
@@ -84,16 +74,17 @@ export const Login = () => {
               required: true,
               minLength: {
                 value: 3,
-                message: "Minimum length is 3"
+                message: "Minimum length is 3",
               },
               pattern: {
                 value: /@/,
-                message: "Repeat email must contain @ symbol"
-              }
+                message: "Repeat email must contain @ symbol",
+              },
             })}
             placeholder="Repeat email"
           />
           {errors.repeatemail && <p>{errors.repeatemail.message}</p>}
+          {error && <p>{error}</p>}
           <Button $loginform type="submit" disabled={false}>
             Go in!
           </Button>

@@ -25,13 +25,13 @@ export const ProductDetail = () => {
     setCounterValue(value);
   };
 
-  fetchEffect();
-  useCartEffects(cartProducts, setCartProducts);
-
   const handleAddLS = () => {
     addLS(product, counterValue, cartProducts, setCartProducts);
     setCounterValue(0);
   };
+
+  fetchEffect();
+  useCartEffects(cartProducts, setCartProducts);
 
   return (
     <div>
@@ -42,7 +42,6 @@ export const ProductDetail = () => {
         updateCounterValue={updateCounterValue}
         product={product}
       />
-      
     </div>
   );
 };

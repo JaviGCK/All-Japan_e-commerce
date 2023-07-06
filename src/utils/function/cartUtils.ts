@@ -5,7 +5,7 @@ export const getLS = () => {
   if (cartProductsString) {
     return JSON.parse(cartProductsString);
   }
-  return null;
+  return;
 };
 
 export const addLS = (

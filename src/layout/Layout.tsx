@@ -4,16 +4,17 @@ import { Outlet } from "react-router-dom"
 import { FilterProvider } from "../context/FilterContext"
 import { ProductsProvider } from "../context/ProductContext"
 
+
 export const Layout = () => {
 
     return (
         <>
             <FilterProvider>
                 <ProductsProvider>
-                    <Header />
-                    <main>
-                        <Outlet />
-                    </main>
+                        <Header />
+                        <main>
+                            <Outlet />
+                        </main>
                 </ProductsProvider>
             </FilterProvider>
 

@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import { Button, Wrapp } from '../style';
+import { useCartEffects } from '../../useeffects';
+import { ProductProps } from '../../types';
 
 export const CounterApp = ({ addLS, counterValue, updateCounterValue, product }: { addLS: (product: any, counterValue: number) => void; counterValue: number; updateCounterValue: (value: number) => void; product: any }) => {
 
     const initialValue = 0;
     const [counter, setCounter] = useState(initialValue);
-
+    const [cartProducts, setCartProducts] = useState<ProductProps[]>([]);
+    useCartEffects(cartProducts, setCartProducts)
     const increaseValue = () => {
         setCounter((prevState: number) => prevState + 1)
         updateCounterValue(counter + 1);
@@ -16,14 +19,15 @@ export const CounterApp = ({ addLS, counterValue, updateCounterValue, product }:
         updateCounterValue(counter - 1);
     }
 
-    const resetValue = () => {
-        setCounter(initialValue)
-    }
-
-
     const handleBtnBuy = (): void => {
         addLS(product, counterValue);
+        updateCounterValue(counterValue);
         resetValue();
+    };
+
+
+    const resetValue = () => {
+        setCounter(initialValue)
     }
 
     if (counter === -1) {

@@ -41,3 +41,13 @@ export const SpanProduct = styled.span`
     font-size: 1.5rem;
     font-weight: bold;
 `
+
+export const SpanCart = styled.span`
+    position: absolute;
+    right: 13.5%;
+    margin-bottom: 3vh;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: coral;
+    z-index: 1;
+`
