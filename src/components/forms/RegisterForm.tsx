@@ -2,7 +2,10 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { Button, InputForm, Wrapp, WrappSection } from "../style";
-
+/**
+ * 
+ * @returns form to get date to buy, this is a step after go to buy from cart
+ */
 export function RegisterForm() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const {

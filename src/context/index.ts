@@ -1,3 +1,3 @@
 export * from './FilterContext';
 export * from './ProductContext';
-export * from './AuthContext'
+export * from './AuthContext';

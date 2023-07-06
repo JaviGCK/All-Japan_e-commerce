@@ -7,14 +7,24 @@ import { H1Logo, Button, Wrapp, Links, ImgLogo, ImgHome, SpanCart } from '../sty
 import { useState } from 'react';
 import { ProductProps } from '../../types';
 import { useCartEffects } from '../../useeffects';
-
+/**
+ * 
+ * @returns header elements with logo & name and cart counter to show you the product you have on a cart and link to home page
+ */
 export const Header = () => {
     const { isAuthentificated } = useAuthContext();
 
     const [cartProducts, setCartProducts] = useState<ProductProps[]>([]);
     useCartEffects(cartProducts, setCartProducts);
 
-    const itemCount = cartProducts.length;
+    let itemCount: number | null = null;
+
+    if (cartProducts.length === 0) {
+        itemCount = null;
+    } else {
+        itemCount = cartProducts.length;
+    }
+
 
     return (
         <header>

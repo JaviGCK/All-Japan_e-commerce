@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { H2W, P, WrappSection } from "../style";
-
+/**
+ * 
+ * @returns this show a page you can only go if you are logged
+ */
 export const Private = () => {
   const navigate = useNavigate();
 

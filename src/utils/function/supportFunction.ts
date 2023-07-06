@@ -1,5 +1,10 @@
 import { ProductProps } from "../../types/produtc";
-
+/**
+ * 
+ * @param filter 
+ * @param allProducts 
+ * @returns filtered product that you need in different stage of the app
+ */
 export function filterProduct (filter: string, allProducts: ProductProps[]) {
     if(allProducts === null) return;
     if(filter === "all products") return allProducts;

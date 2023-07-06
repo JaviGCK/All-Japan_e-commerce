@@ -20,7 +20,7 @@ export const DetailCard: FC<ProductProps> = (props) => {
     <WrappSection>
       <Button $back>
         <Links $home to={HOME}>
-          <ImgDetail src={goback} alt="Go back"/>
+          <ImgDetail src={goback} alt="Go back" />
         </Links>
       </Button>
       <Wrapp $DetailProduct>
@@ -35,7 +35,7 @@ export const DetailCard: FC<ProductProps> = (props) => {
         <p>{props.weight}gr</p>
         <p>{props.fullDescription}</p>
         <h2>{props.price}€</h2>
-        
+
       </Wrapp>
     </WrappSection>
   );

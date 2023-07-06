@@ -5,7 +5,10 @@ import { PRIVATE } from "../../config/routes/path";
 import { useForm } from "react-hook-form";
 import { FormInputs } from "../../types";
 import { Button, H2, InputForm, Wrapp, WrappSection } from "../style";
-
+/**
+ * 
+ * @returns this make the form to log 
+ */
 export const Login = () => {
   const {
     register,

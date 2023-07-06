@@ -3,7 +3,10 @@ import { ProductProps } from "../../types/produtc";
 import { useCartEffects } from "../../useeffects/useCartEffects";
 import { getTotalPrice } from "../../utils/function/getTotalPrice";
 import { Button, H2, ImgProduct, Links, Wrapp, WrappSection } from "../style";
-
+/**
+ * 
+ * @returns return Cart page with the products you choice to buy
+ */
 export const Cart = () => {
     const [cartProducts, setCartProducts] = useState<ProductProps[]>([]);
     const productToRender = cartProducts;

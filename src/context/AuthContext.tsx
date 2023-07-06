@@ -1,7 +1,9 @@
 import React, { createContext, useCallback, useContext, useMemo, useState } from "react";
 import { AuthContextType } from "../types/index";
-
-const MY_AUTH_APP = "MY_AUTH_APP";
+/**
+ * context with the logic to login and logout
+ */
+const MY_AUTH_APP = "USER_LOGED";
 
 export const AuthContext = createContext<AuthContextType>({
   login: () => {},

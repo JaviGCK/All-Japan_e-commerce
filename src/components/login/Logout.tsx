@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useAuthContext } from "../../context"
 import { Button, H2G, Links, WrappSection } from "../style";
-
-
-
+/**
+ * 
+ * @returns button to logout and message of goodbye 
+ */
 export const Logout = () => {
   const { logout } = useAuthContext();
   useEffect(() => logout());

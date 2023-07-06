@@ -1,5 +1,8 @@
 import { ProductProps } from "../../types/produtc";
-
+/**
+ * 
+ * @returns logic of LS to use for the cart
+ */
 export const getLS = () => {
   const cartProductsString = localStorage.getItem("cart-products");
   if (cartProductsString) {

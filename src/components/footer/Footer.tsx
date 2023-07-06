@@ -2,7 +2,10 @@ import icon1 from '../../assets/img/icons8-facebook-nuevo-64-removebg-preview.we
 import icon2 from '../../assets/img/icons8-instagram-50-removebg-preview.webp'
 import icon3 from '../../assets/img/icons8-pinterest-50__1_-removebg-preview.webp'
 import { Button, H3, Wrapp, WrappFooter, Input, ImgSocialMedia } from '../style'
-
+/**
+ * 
+ * @returns the footer of the page with some information about social media & newsletter
+ */
 export const Footer = () => {
     return (
         <WrappFooter>
